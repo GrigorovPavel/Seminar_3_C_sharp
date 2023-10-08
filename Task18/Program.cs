@@ -10,7 +10,8 @@ string Quarter(int num)
     if(num == 4) return "X > 0 , Y < 0 ";
     else
     {
-    return "Четверти с таким номером нет.";
+    // return "Четверти с таким номером нет.";  // Способ попроще
+    return null; // Заморочный способ
     }
 }
 
@@ -18,5 +19,7 @@ Console.WriteLine("Введите номер четверти от 1 до 4: ");
 int quarter = Convert.ToInt32(Console.ReadLine());
 
 string result = Quarter(quarter);
-Console.WriteLine(result);
+
+// Console.WriteLine(result);  // Способ попроще
+Console.WriteLine((result != null) ? result : "Четверти с таким номером нет."); // Заморочный способ
 
